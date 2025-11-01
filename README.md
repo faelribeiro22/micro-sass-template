@@ -1,4 +1,4 @@
-# 🚀 MicroSaaS Template# 🚀 MicroSaaS TemplateWelcome to your new TanStack app! 
+# 🚀 MicroSaaS Template# 🚀 MicroSaaS Template# 🚀 MicroSaaS TemplateWelcome to your new TanStack app! 
 
 
 
@@ -6,7 +6,7 @@ Template completo e moderno para desenvolvimento rápido de aplicações SaaS us
 
 
 
-## ✨ CaracterísticasTemplate completo e moderno para desenvolvimento rápido de aplicações SaaS usando **TanStack Start**, com autenticação, banco de dados e componentes UI prontos para uso.# Getting Started
+## ✨ CaracterísticasTemplate completo e moderno para desenvolvimento rápido de aplicações SaaS usando **TanStack Start**, com autenticação, banco de dados e componentes UI prontos para uso.
 
 
 
@@ -14,393 +14,797 @@ Template completo e moderno para desenvolvimento rápido de aplicações SaaS us
 
 - 🗄️ **Banco de Dados Type-Safe** - PostgreSQL + [Drizzle ORM](https://orm.drizzle.team/)
 
-- ⚡ **TanStack Start** - Framework full-stack com SSR, streaming e roteamento avançado## ✨ CaracterísticasTo run this application:
+- 🐳 **Docker Ready** - PostgreSQL + PgAdmin em Docker Compose## ✨ CaracterísticasTemplate completo e moderno para desenvolvimento rápido de aplicações SaaS usando **TanStack Start**, com autenticação, banco de dados e componentes UI prontos para uso.# Getting Started
+
+- ⚡ **TanStack Start** - Framework full-stack com SSR, streaming e roteamento avançado
 
 - 🎨 **Tailwind CSS** - Estilização moderna e responsiva
 
 - 📝 **TypeScript** - Type-safety completo em todo o stack
 
-- 🧩 **Componentes UI** - Componentes reutilizáveis pré-construídos
-
-- 🔥 **Hot Module Replacement** - Desenvolvimento ultra-rápido com Vite- 🔐 **Autenticação Completa** - Sistema de login/registro com [Better Auth](https://www.better-auth.com/)```bash
-
-- 📱 **Responsivo** - Design mobile-first
-
-- 🗄️ **Banco de Dados Type-Safe** - PostgreSQL + [Drizzle ORM](https://orm.drizzle.team/)npm install
-
-## 📋 Pré-requisitos
-
-- ⚡ **TanStack Start** - Framework full-stack com SSR, streaming e roteamento avançadonpm run start
-
-- Node.js 18+ 
-
-- PostgreSQL 14+- 🎨 **Tailwind CSS** - Estilização moderna e responsiva```
-
-- npm ou yarn
-
-- 📝 **TypeScript** - Type-safety completo em todo o stack
-
-## 🚀 Começando
-
-- 🧩 **Componentes UI** - Componentes reutilizáveis pré-construídos# Building For Production
-
-### 1. Clone o repositório
+- 🧩 **Componentes UI** - Componentes reutilizáveis pré-construídos- 🔐 **Autenticação Completa** - Sistema de login/registro com [Better Auth](https://www.better-auth.com/)
 
 - 🔥 **Hot Module Replacement** - Desenvolvimento ultra-rápido com Vite
 
+- 📱 **Responsivo** - Design mobile-first- 🗄️ **Banco de Dados Type-Safe** - PostgreSQL + [Drizzle ORM](https://orm.drizzle.team/)
+
+
+
+## 📋 Pré-requisitos- ⚡ **TanStack Start** - Framework full-stack com SSR, streaming e roteamento avançado## ✨ CaracterísticasTo run this application:
+
+
+
+- Node.js 18+ - 🎨 **Tailwind CSS** - Estilização moderna e responsiva
+
+- Docker e Docker Compose (recomendado) **OU** PostgreSQL 14+
+
+- npm ou yarn- 📝 **TypeScript** - Type-safety completo em todo o stack
+
+
+
+## 🚀 Começando- 🧩 **Componentes UI** - Componentes reutilizáveis pré-construídos
+
+
+
+### 1. Clone o repositório- 🔥 **Hot Module Replacement** - Desenvolvimento ultra-rápido com Vite- 🔐 **Autenticação Completa** - Sistema de login/registro com [Better Auth](https://www.better-auth.com/)```bash
+
+
+
+```bash- 📱 **Responsivo** - Design mobile-first
+
+git clone https://github.com/faelribeiro22/micro-sass-template.git
+
+cd micro-sass-template- 🗄️ **Banco de Dados Type-Safe** - PostgreSQL + [Drizzle ORM](https://orm.drizzle.team/)npm install
+
+```
+
+## 📋 Pré-requisitos
+
+### 2. Instale as dependências
+
+- ⚡ **TanStack Start** - Framework full-stack com SSR, streaming e roteamento avançadonpm run start
+
 ```bash
+
+npm install- Node.js 18+ 
+
+```
+
+- PostgreSQL 14+- 🎨 **Tailwind CSS** - Estilização moderna e responsiva```
+
+### 3. Inicie o PostgreSQL
+
+- npm ou yarn
+
+**Opção A: Com Docker (Recomendado)** 🐳
+
+- 📝 **TypeScript** - Type-safety completo em todo o stack
+
+```bash
+
+docker-compose up -d## 🚀 Começando
+
+```
+
+- 🧩 **Componentes UI** - Componentes reutilizáveis pré-construídos# Building For Production
+
+Isso iniciará PostgreSQL na porta 5432 e PgAdmin na porta 5050.
+
+### 1. Clone o repositório
+
+> 📚 Ver [DOCKER.md](./DOCKER.md) para instruções completas
+
+- 🔥 **Hot Module Replacement** - Desenvolvimento ultra-rápido com Vite
+
+**Opção B: PostgreSQL Local**
+
+```bash
+
+Se você já tem PostgreSQL instalado localmente:
 
 git clone https://github.com/faelribeiro22/micro-sass-template.git- 📱 **Responsivo** - Design mobile-firstTo build this application for production:
 
-cd micro-sass-template
+```bash
+
+# Criar banco de dadoscd micro-sass-template
+
+createdb microsaas
+
+```
+
+# OU via psql
+
+psql -c "CREATE DATABASE microsaas;"
+
+```
+
+### 2. Instale as dependências## 📋 Pré-requisitos```bash
+
+### 4. Configure as variáveis de ambiente
+
+
+
+Copie o arquivo `.env.example` para `.env`:
+
+```bashnpm run build
+
+```bash
+
+cp .env.example .envnpm install
+
+```
+
+```- Node.js 18+ ```
+
+O arquivo `.env` já vem configurado para usar o Docker:
+
+
+
+```env
+
+# Database (Docker) - Já configurado!### 3. Configure as variáveis de ambiente- PostgreSQL 14+
+
+DATABASE_URL=postgresql://microsaas_user:microsaas_password@localhost:5432/microsaas
+
+
+
+# Authentication
+
+BETTER_AUTH_SECRET=change-me-in-productionCopie o arquivo `.env.example` para `.env` e configure suas variáveis:- npm ou yarn## Testing
+
+BETTER_AUTH_URL=http://localhost:3000
 
 ```
 
 
 
-### 2. Instale as dependências## 📋 Pré-requisitos```bash
+> **Dica:** Para gerar um secret seguro: `openssl rand -base64 32````bash
 
 
 
-```bashnpm run build
-
-npm install
-
-```- Node.js 18+ ```
+### 5. Sincronize o banco de dadoscp .env.example .env
 
 
 
-### 3. Configure as variáveis de ambiente- PostgreSQL 14+
+```bash```## 🚀 ComeçandoThis project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+
+npm run db:push
+
+```
 
 
 
-Copie o arquivo `.env.example` para `.env` e configure suas variáveis:- npm ou yarn## Testing
+### 6. Inicie o servidor de desenvolvimentoEdite o arquivo `.env` com suas configurações:
 
 
 
 ```bash
 
-cp .env.example .env
+npm run dev
 
-```## 🚀 ComeçandoThis project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
-
-
-
-Edite o arquivo `.env` com suas configurações:
+``````env### 1. Clone o repositório```bash
 
 
 
-```env### 1. Clone o repositório```bash
-
-DATABASE_URL=postgresql://user:password@localhost:5432/microsaas
-
-BETTER_AUTH_SECRET=your-secret-key-herenpm run test
-
-BETTER_AUTH_URL=http://localhost:3000
-
-```\`\`\`bash```
+Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.DATABASE_URL=postgresql://user:password@localhost:5432/microsaas
 
 
 
-> **Dica:** Para gerar um secret seguro, use: `openssl rand -base64 32`git clone <seu-repo>
+## 🐳 DockerBETTER_AUTH_SECRET=your-secret-key-herenpm run test
 
 
+
+Este projeto inclui Docker Compose para facilitar o desenvolvimento.BETTER_AUTH_URL=http://localhost:3000
+
+
+
+### Comandos Rápidos```\`\`\`bash```
+
+
+
+```bash
+
+# Iniciar PostgreSQL e PgAdmin
+
+docker-compose up -d> **Dica:** Para gerar um secret seguro, use: `openssl rand -base64 32`git clone <seu-repo>
+
+
+
+# Ver logs
+
+docker-compose logs -f
 
 ### 4. Configure o banco de dadoscd micro-sass## Styling
 
+# Parar containers
+
+docker-compose stop
 
 
-Execute as migrações do banco de dados:\`\`\`
+
+# Parar e removerExecute as migrações do banco de dados:\`\`\`
+
+docker-compose down
 
 
 
-```bashThis project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
+# Acessar PostgreSQL CLI
+
+docker-compose exec postgres psql -U microsaas_user -d microsaas```bashThis project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
+
+```
 
 npm run db:push
+
+### PgAdmin (Interface Visual)
 
 ```### 2. Instale as dependências
 
-
-
-### 5. Inicie o servidor de desenvolvimento
-
-
-
-```bash\`\`\`bash
-
-npm run dev
-
-```npm install
+Acesse: http://localhost:5050
 
 
 
-Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.\`\`\`## Routing
+- Email: `admin@microsaas.local`
+
+- Senha: `admin`### 5. Inicie o servidor de desenvolvimento
 
 
 
-## 📁 Estrutura do ProjetoThis project uses [TanStack Router](https://tanstack.com/router). The initial setup is a file based router. Which means that the routes are managed as files in `src/routes`.
+> 📚 Documentação completa: [DOCKER.md](./DOCKER.md)
 
 
 
-```### 3. Configure as variáveis de ambiente
+## 📁 Estrutura do Projeto```bash\`\`\`bash
+
+
+
+```npm run dev
 
 src/
 
-├── components/          # Componentes React reutilizáveis### Adding A Route
+├── components/          # Componentes React reutilizáveis```npm install
 
 │   ├── auth/           # Componentes de autenticação
 
-│   │   ├── LoginForm.tsxCopie o arquivo `.env.example` para `.env` e configure suas variáveis:
+│   │   ├── LoginForm.tsx
 
 │   │   └── SignupForm.tsx
 
-│   ├── layout/         # Componentes de layoutTo add a new route to your application just add another a new file in the `./src/routes` directory.
+│   ├── layout/         # Componentes de layoutAcesse [http://localhost:3000](http://localhost:3000) no seu navegador.\`\`\`## Routing
 
 │   │   └── Layout.tsx
 
-│   └── ui/             # Componentes UI básicos\`\`\`bash
+│   └── ui/             # Componentes UI básicos
 
 │       ├── Button.tsx
 
-│       ├── Card.tsxcp .env.example .envTanStack will automatically generate the content of the route file for you.
+│       ├── Card.tsx## 📁 Estrutura do ProjetoThis project uses [TanStack Router](https://tanstack.com/router). The initial setup is a file based router. Which means that the routes are managed as files in `src/routes`.
 
 │       └── Input.tsx
 
-├── db/                 # Configuração do banco de dados\`\`\`
+├── db/                 # Configuração do banco de dados
 
 │   ├── schema.ts       # Schema do Drizzle ORM
 
-│   └── index.ts        # Cliente do banco de dadosNow that you have two routes you can use a `Link` component to navigate between them.
+│   └── index.ts        # Cliente do banco de dados```### 3. Configure as variáveis de ambiente
 
 ├── lib/                # Utilitários e helpers
 
-│   ├── auth-client.ts  # Cliente de autenticaçãoEdite o arquivo `.env` com suas configurações:
+│   ├── auth-client.ts  # Cliente de autenticaçãosrc/
 
 │   └── utils.ts        # Funções utilitárias
 
-├── routes/             # Rotas do TanStack Router### Adding Links
+├── routes/             # Rotas do TanStack Router├── components/          # Componentes React reutilizáveis### Adding A Route
 
 │   ├── api/           # Rotas de API
 
-│   │   └── auth/\`\`\`env
+│   │   └── auth/│   ├── auth/           # Componentes de autenticação
 
 │   │       └── $.ts   # Handler de autenticação
 
-│   ├── __root.tsx     # Layout raizDATABASE_URL=postgresql://user:password@localhost:5432/microsaasTo use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
+│   ├── __root.tsx     # Layout raiz│   │   ├── LoginForm.tsxCopie o arquivo `.env.example` para `.env` e configure suas variáveis:
 
 │   ├── index.tsx      # Página inicial
 
-│   ├── login.tsx      # Página de loginBETTER_AUTH_SECRET=your-secret-key-here
+│   ├── login.tsx      # Página de login│   │   └── SignupForm.tsx
 
 │   ├── signup.tsx     # Página de registro
 
-│   └── dashboard.tsx  # Dashboard protegidoBETTER_AUTH_URL=http://localhost:3000```tsx
+│   └── dashboard.tsx  # Dashboard protegido│   ├── layout/         # Componentes de layoutTo add a new route to your application just add another a new file in the `./src/routes` directory.
 
 └── auth.ts            # Configuração do Better Auth
 
-```\`\`\`import { Link } from "@tanstack/react-router";
+```│   │   └── Layout.tsx
 
 
 
-## 🛠️ Scripts Disponíveis```
+## 🛠️ Scripts Disponíveis│   └── ui/             # Componentes UI básicos\`\`\`bash
 
 
 
-- `npm run dev` - Inicia o servidor de desenvolvimento### 4. Configure o banco de dados
+```bash│       ├── Button.tsx
 
-- `npm run build` - Compila para produção
+# Desenvolvimento
 
-- `npm run serve` - Serve a build de produçãoThen anywhere in your JSX you can use it like so:
+npm run dev              # Inicia servidor de desenvolvimento│       ├── Card.tsxcp .env.example .envTanStack will automatically generate the content of the route file for you.
 
-- `npm test` - Executa os testes
 
-- `npm run db:generate` - Gera migrações do banco de dadosExecute as migrações do banco de dados:
 
-- `npm run db:migrate` - Executa migrações
+# Build│       └── Input.tsx
 
-- `npm run db:push` - Sincroniza schema com o banco de dados```tsx
+npm run build            # Compila para produção
 
-- `npm run db:studio` - Abre o Drizzle Studio
+npm run serve            # Serve a build de produção├── db/                 # Configuração do banco de dados\`\`\`
 
-\`\`\`bash<Link to="/about">About</Link>
+
+
+# Database│   ├── schema.ts       # Schema do Drizzle ORM
+
+npm run db:push          # Sincroniza schema com o banco
+
+npm run db:generate      # Gera migrações│   └── index.ts        # Cliente do banco de dadosNow that you have two routes you can use a `Link` component to navigate between them.
+
+npm run db:migrate       # Executa migrações
+
+npm run db:studio        # Abre Drizzle Studio (http://localhost:4983)├── lib/                # Utilitários e helpers
+
+
+
+# Testes│   ├── auth-client.ts  # Cliente de autenticaçãoEdite o arquivo `.env` com suas configurações:
+
+npm test                 # Executa os testes
+
+│   └── utils.ts        # Funções utilitárias
+
+# Docker (adicione ao package.json)
+
+npm run docker:up        # docker-compose up -d├── routes/             # Rotas do TanStack Router### Adding Links
+
+npm run docker:down      # docker-compose down
+
+npm run docker:logs      # docker-compose logs -f│   ├── api/           # Rotas de API
+
+```
+
+│   │   └── auth/\`\`\`env
 
 ## 🔐 Autenticação
 
-npm run db:push```
+│   │       └── $.ts   # Handler de autenticação
 
 O template usa **Better Auth** para autenticação, com suporte para:
 
-\`\`\`
+│   ├── __root.tsx     # Layout raizDATABASE_URL=postgresql://user:password@localhost:5432/microsaasTo use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
 
 - ✅ Email e senha
 
-- ✅ Sessões segurasThis will create a link that will navigate to the `/about` route.
+- ✅ Sessões seguras│   ├── index.tsx      # Página inicial
 
 - ✅ Proteção de rotas
 
-- 🔜 OAuth (GitHub, Google, etc.) - fácil de adicionar### 5. Inicie o servidor de desenvolvimento
+- 🔜 OAuth (GitHub, Google, etc.) - fácil de adicionar│   ├── login.tsx      # Página de loginBETTER_AUTH_SECRET=your-secret-key-here
 
 
 
-### Adicionar Provedores OAuthMore information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
+### Adicionar Provedores OAuth│   ├── signup.tsx     # Página de registro
 
 
 
-Para adicionar OAuth, edite `src/auth.ts`:\`\`\`bash
+Para adicionar OAuth, edite `src/auth.ts`:│   └── dashboard.tsx  # Dashboard protegidoBETTER_AUTH_URL=http://localhost:3000```tsx
 
 
 
-```typescriptnpm run dev### Using A Layout
+```typescript└── auth.ts            # Configuração do Better Auth
 
 socialProviders: {
 
-  github: {\`\`\`
+  github: {```\`\`\`import { Link } from "@tanstack/react-router";
 
     clientId: process.env.GITHUB_CLIENT_ID || '',
 
-    clientSecret: process.env.GITHUB_CLIENT_SECRET || '',In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you use the `<Outlet />` component.
+    clientSecret: process.env.GITHUB_CLIENT_SECRET || '',
 
   },
 
-  google: {Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
+  google: {## 🛠️ Scripts Disponíveis```
 
     clientId: process.env.GOOGLE_CLIENT_ID || '',
 
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',Here is an example layout that includes a header:
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
 
   },
 
-}## 📁 Estrutura do Projeto
+}- `npm run dev` - Inicia o servidor de desenvolvimento### 4. Configure o banco de dados
 
 ```
 
-```tsx
+- `npm run build` - Compila para produção
 
 Adicione as variáveis de ambiente correspondentes no arquivo `.env`.
 
-\`\`\`import { Outlet, createRootRoute } from '@tanstack/react-router'
+- `npm run serve` - Serve a build de produçãoThen anywhere in your JSX you can use it like so:
 
 ## 🗄️ Banco de Dados
 
-src/import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+- `npm test` - Executa os testes
 
 O template usa **Drizzle ORM** com PostgreSQL. O schema está definido em `src/db/schema.ts`.
 
-├── components/          # Componentes React reutilizáveis
+- `npm run db:generate` - Gera migrações do banco de dadosExecute as migrações do banco de dados:
 
 ### Adicionar Novas Tabelas
 
-│   ├── auth/           # Componentes de autenticaçãoimport { Link } from "@tanstack/react-router";
+- `npm run db:migrate` - Executa migrações
 
 1. Edite `src/db/schema.ts`:
 
-│   ├── layout/         # Componentes de layout
+- `npm run db:push` - Sincroniza schema com o banco de dados```tsx
 
 ```typescript
 
-export const posts = pgTable('posts', {│   └── ui/             # Componentes UI básicosexport const Route = createRootRoute({
+export const posts = pgTable('posts', {- `npm run db:studio` - Abre o Drizzle Studio
 
   id: uuid('id').primaryKey().defaultRandom(),
 
-  title: text('title').notNull(),├── db/                 # Configuração do banco de dados  component: () => (
+  title: text('title').notNull(),\`\`\`bash<Link to="/about">About</Link>
 
   content: text('content'),
 
-  userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),│   ├── schema.ts       # Schema do Drizzle ORM    <>
+  userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),## 🔐 Autenticação
 
   createdAt: timestamp('created_at').defaultNow().notNull(),
 
-  updatedAt: timestamp('updated_at').defaultNow().notNull(),│   └── index.ts        # Cliente do banco de dados      <header>
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),npm run db:push```
 
 });
 
-```├── lib/                # Utilitários e helpers        <nav>
+```O template usa **Better Auth** para autenticação, com suporte para:
 
 
 
-2. Sincronize com o banco de dados:│   ├── auth-client.ts  # Cliente de autenticação          <Link to="/">Home</Link>
+2. Sincronize com o banco de dados:\`\`\`
 
 
 
-```bash│   └── utils.ts        # Funções utilitárias          <Link to="/about">About</Link>
+```bash- ✅ Email e senha
 
 npm run db:push
 
-```├── routes/             # Rotas do TanStack Router        </nav>
+```- ✅ Sessões segurasThis will create a link that will navigate to the `/about` route.
 
 
 
-### Visualizar Dados│   ├── api/           # Rotas de API      </header>
+### Visualizar Dados- ✅ Proteção de rotas
 
 
 
-Use o Drizzle Studio para visualizar e editar dados:│   ├── __root.tsx     # Layout raiz      <Outlet />
+**Opção 1: Drizzle Studio**- 🔜 OAuth (GitHub, Google, etc.) - fácil de adicionar### 5. Inicie o servidor de desenvolvimento
 
-
-
-```bash│   ├── index.tsx      # Página inicial      <TanStackRouterDevtools />
+```bash
 
 npm run db:studio
 
-```│   ├── login.tsx      # Página de login    </>
+```
+
+Acesse: http://localhost:4983### Adicionar Provedores OAuthMore information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
 
 
 
-Acesse [http://localhost:4983](http://localhost:4983) no navegador.│   ├── signup.tsx     # Página de registro  ),
+**Opção 2: PgAdmin (Docker)**
 
 
 
-## 🎨 Componentes UI│   └── dashboard.tsx  # Dashboard protegido})
+Acesse: http://localhost:5050Para adicionar OAuth, edite `src/auth.ts`:\`\`\`bash
 
 
 
-O template inclui componentes UI básicos em `src/components/ui/`:└── auth.ts            # Configuração do Better Auth```
+## 🎨 Componentes UI
 
 
 
-### Button\`\`\`
+O template inclui componentes UI básicos em `src/components/ui/`:```typescriptnpm run dev### Using A Layout
 
 
 
-Botão com variantes e estados de loading.The `<TanStackRouterDevtools />` component is not required so you can remove it if you don't want it in your layout.
+### ButtonsocialProviders: {
 
 
 
-```tsx## 🛠️ Scripts Disponíveis
+```tsx  github: {\`\`\`
 
 import { Button } from '~/components/ui/Button';
 
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
+    clientId: process.env.GITHUB_CLIENT_ID || '',
 
 <Button>Clique aqui</Button>
 
-<Button variant="secondary">Secundário</Button>- `npm run dev` - Inicia o servidor de desenvolvimento
+<Button variant="secondary">Secundário</Button>    clientSecret: process.env.GITHUB_CLIENT_SECRET || '',In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you use the `<Outlet />` component.
 
 <Button variant="outline">Outline</Button>
 
-<Button variant="ghost">Ghost</Button>- `npm run build` - Compila para produção
+<Button variant="ghost">Ghost</Button>  },
 
 <Button variant="danger">Perigo</Button>
 
-<Button isLoading>Carregando...</Button>- `npm run serve` - Serve a build de produção## Data Fetching
+<Button isLoading>Carregando...</Button>  google: {Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
 
 ```
 
-- `npm test` - Executa os testes
+    clientId: process.env.GOOGLE_CLIENT_ID || '',
 
 ### Input
 
-- `npm run db:generate` - Gera migrações do banco de dadosThere are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-Input com label e mensagens de erro.
-
-- `npm run db:migrate` - Executa migrações
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',Here is an example layout that includes a header:
 
 ```tsx
 
+import { Input } from '~/components/ui/Input';  },
+
+
+
+<Input }## 📁 Estrutura do Projeto
+
+  label="Email" 
+
+  type="email"```
+
+  placeholder="seu@email.com"
+
+  required```tsx
+
+/>
+
+```Adicione as variáveis de ambiente correspondentes no arquivo `.env`.
+
+
+
+### Card\`\`\`import { Outlet, createRootRoute } from '@tanstack/react-router'
+
+
+
+```tsx## 🗄️ Banco de Dados
+
+import { Card, CardHeader, CardTitle, CardContent } from '~/components/ui/Card';
+
+src/import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+
+<Card>
+
+  <CardHeader>O template usa **Drizzle ORM** com PostgreSQL. O schema está definido em `src/db/schema.ts`.
+
+    <CardTitle>Título do Card</CardTitle>
+
+  </CardHeader>├── components/          # Componentes React reutilizáveis
+
+  <CardContent>
+
+    <p>Conteúdo...</p>### Adicionar Novas Tabelas
+
+  </CardContent>
+
+</Card>│   ├── auth/           # Componentes de autenticaçãoimport { Link } from "@tanstack/react-router";
+
+```
+
+1. Edite `src/db/schema.ts`:
+
+## 🛣️ Rotas
+
+│   ├── layout/         # Componentes de layout
+
+O projeto usa roteamento baseado em arquivos com **TanStack Router**.
+
+```typescript
+
+### Adicionar Nova Rota
+
+export const posts = pgTable('posts', {│   └── ui/             # Componentes UI básicosexport const Route = createRootRoute({
+
+1. Crie um arquivo em `src/routes/`:
+
+  id: uuid('id').primaryKey().defaultRandom(),
+
+```tsx
+
+// src/routes/sobre.tsx  title: text('title').notNull(),├── db/                 # Configuração do banco de dados  component: () => (
+
+import { createFileRoute } from '@tanstack/react-router';
+
+  content: text('content'),
+
+export const Route = createFileRoute('/sobre')({
+
+  component: SobrePage,  userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }),│   ├── schema.ts       # Schema do Drizzle ORM    <>
+
+});
+
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+
+function SobrePage() {
+
+  return <div><h1>Sobre Nós</h1></div>;  updatedAt: timestamp('updated_at').defaultNow().notNull(),│   └── index.ts        # Cliente do banco de dados      <header>
+
+}
+
+```});
+
+
+
+2. Use `Link` para navegar:```├── lib/                # Utilitários e helpers        <nav>
+
+
+
+```tsx
+
+import { Link } from '@tanstack/react-router';
+
+2. Sincronize com o banco de dados:│   ├── auth-client.ts  # Cliente de autenticação          <Link to="/">Home</Link>
+
+<Link to="/sobre">Sobre</Link>
+
+```
+
+
+
+## 🚀 Deploy```bash│   └── utils.ts        # Funções utilitárias          <Link to="/about">About</Link>
+
+
+
+### Vercel (Recomendado)npm run db:push
+
+
+
+```bash```├── routes/             # Rotas do TanStack Router        </nav>
+
+npm i -g vercel
+
+vercel
+
+```
+
+### Visualizar Dados│   ├── api/           # Rotas de API      </header>
+
+Configure as variáveis de ambiente no dashboard da Vercel.
+
+
+
+### Railway
+
+Use o Drizzle Studio para visualizar e editar dados:│   ├── __root.tsx     # Layout raiz      <Outlet />
+
+1. Crie uma conta em [Railway](https://railway.app)
+
+2. Conecte seu repositório GitHub
+
+3. Configure as variáveis de ambiente
+
+4. Railway detectará automaticamente o projeto```bash│   ├── index.tsx      # Página inicial      <TanStackRouterDevtools />
+
+
+
+### Outras Plataformasnpm run db:studio
+
+
+
+- **Render** - Suporte nativo para Node.js```│   ├── login.tsx      # Página de login    </>
+
+- **Fly.io** - Deploy global
+
+- **AWS/GCP/Azure** - Plataformas enterprise
+
+
+
+> ⚠️ **Importante:** Em produção, use PostgreSQL gerenciado (não Docker)Acesse [http://localhost:4983](http://localhost:4983) no navegador.│   ├── signup.tsx     # Página de registro  ),
+
+
+
+## 🧪 Testes
+
+
+
+```bash## 🎨 Componentes UI│   └── dashboard.tsx  # Dashboard protegido})
+
+# Executar testes
+
+npm test
+
+
+
+# Testes em watch modeO template inclui componentes UI básicos em `src/components/ui/`:└── auth.ts            # Configuração do Better Auth```
+
+npm run test:watch
+
+```
+
+
+
+## 📚 Documentação### Button\`\`\`
+
+
+
+- 📖 **[README.md](./README.md)** - Este arquivo
+
+- 🚀 **[QUICKSTART.md](./QUICKSTART.md)** - Guia rápido
+
+- 🐳 **[DOCKER.md](./DOCKER.md)** - Instruções Docker completasBotão com variantes e estados de loading.The `<TanStackRouterDevtools />` component is not required so you can remove it if you don't want it in your layout.
+
+- 📚 **[.github/PROJECT_CONTEXT.md](./.github/PROJECT_CONTEXT.md)** - Contexto do projeto
+
+- 🏗️ **[.github/ARCHITECTURE.md](./.github/ARCHITECTURE.md)** - Arquitetura detalhada
+
+
+
+## 🤝 Contribuindo```tsx## 🛠️ Scripts Disponíveis
+
+
+
+Contribuições são bem-vindas! Para contribuir:import { Button } from '~/components/ui/Button';
+
+
+
+1. Fork o projetoMore information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
+
+2. Crie uma branch (`git checkout -b feature/nova-feature`)
+
+3. Commit suas mudanças (`git commit -m 'feat: adiciona nova feature'`)<Button>Clique aqui</Button>
+
+4. Push para a branch (`git push origin feature/nova-feature`)
+
+5. Abra um Pull Request<Button variant="secondary">Secundário</Button>- `npm run dev` - Inicia o servidor de desenvolvimento
+
+
+
+## 📝 Licença<Button variant="outline">Outline</Button>
+
+
+
+MIT © [Rafael Ribeiro](https://github.com/faelribeiro22)<Button variant="ghost">Ghost</Button>- `npm run build` - Compila para produção
+
+
+
+## 🎯 Próximos Passos<Button variant="danger">Perigo</Button>
+
+
+
+Após configurar o template, considere adicionar:<Button isLoading>Carregando...</Button>- `npm run serve` - Serve a build de produção## Data Fetching
+
+
+
+- [ ] Testes unitários e de integração completos```
+
+- [ ] Integração com Stripe para pagamentos
+
+- [ ] Sistema de emails (Resend, SendGrid)- `npm test` - Executa os testes
+
+- [ ] Upload de arquivos (S3, Cloudinary)
+
+- [ ] Analytics (PostHog, Mixpanel)### Input
+
+- [ ] Monitoramento de erros (Sentry)
+
+- [ ] CI/CD com GitHub Actions- `npm run db:generate` - Gera migrações do banco de dadosThere are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
+
+- [ ] Dark mode
+
+Input com label e mensagens de erro.
+
+## 📞 Suporte
+
+- `npm run db:migrate` - Executa migrações
+
+- 🐛 **Bugs:** [Issues](https://github.com/faelribeiro22/micro-sass-template/issues)
+
+- 💬 **Dúvidas:** [Discussions](https://github.com/faelribeiro22/micro-sass-template/discussions)```tsx
+
+- 📧 **Email:** faelribeirodesousa@gmail.com
+
 import { Input } from '~/components/ui/Input';- `npm run db:push` - Sincroniza schema com o banco de dadosFor example:
 
+---
 
+
+
+Desenvolvido com ❤️ usando TanStack Start
 
 <Input - `npm run db:studio` - Abre o Drizzle Studio
 

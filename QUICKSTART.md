@@ -2,7 +2,29 @@
 
 ## 🎯 Primeiros Passos
 
-### 1. Configurar PostgreSQL Local
+### Opção 1: Com Docker (Recomendado) 🐳
+
+```bash
+# 1. Instalar dependências
+npm install
+
+# 2. Iniciar PostgreSQL com Docker
+docker-compose up -d
+
+# 3. Sincronizar banco de dados
+npm run db:push
+
+# 4. Iniciar desenvolvimento
+npm run dev
+```
+
+Pronto! Acesse http://localhost:3000
+
+> 📚 Ver [DOCKER.md](./DOCKER.md) para mais detalhes
+
+### Opção 2: PostgreSQL Local
+
+#### 1. Configurar PostgreSQL Local
 
 Se você não tem PostgreSQL instalado:
 
