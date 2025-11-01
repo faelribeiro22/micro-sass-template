@@ -1,0 +1,135 @@
+name: ✅ CI - Build e Testes
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  lint-and-type-check:
+    name: 🔍 Lint e Type Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🔍 TypeScript Check
+        run: npx tsc --noEmit
+
+  build:
+    name: 🔨 Build
+    runs-on: ubuntu-latest
+    needs: lint-and-type-check
+    
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🔨 Build
+        run: npm run build
+
+      - name: 📊 Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: .output
+          retention-days: 7
+
+  test:
+    name: 🧪 Testes
+    runs-on: ubuntu-latest
+    needs: lint-and-type-check
+    
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🧪 Executar testes
+        run: npm test
+
+  security-audit:
+    name: 🔒 Auditoria de Segurança
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 🔒 NPM Audit
+        run: npm audit --audit-level=moderate
+        continue-on-error: true
+
+      - name: 📝 Audit Report
+        if: always()
+        run: |
+          echo "## 🔒 Relatório de Segurança" >> $GITHUB_STEP_SUMMARY
+          npm audit --json | jq -r '.vulnerabilities | to_entries[] | "- \(.key): \(.value.severity)"' >> $GITHUB_STEP_SUMMARY || echo "Nenhuma vulnerabilidade encontrada" >> $GITHUB_STEP_SUMMARY
+
+  validate-pr:
+    name: ✅ Validação Completa
+    runs-on: ubuntu-latest
+    needs: [build, test, security-audit]
+    if: always()
+    
+    steps:
+      - name: ✅ Verificar status
+        run: |
+          if [[ "${{ needs.build.result }}" == "success" ]] && \
+             [[ "${{ needs.test.result }}" == "success" ]]; then
+            echo "✅ Todos os checks passaram!"
+            exit 0
+          else
+            echo "❌ Alguns checks falharam"
+            exit 1
+          fi
+
+      - name: 📊 Resumo
+        if: always()
+        run: |
+          echo "## 📊 Resumo da CI" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Job | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔍 Lint & Type Check | ${{ needs.lint-and-type-check.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔨 Build | ${{ needs.build.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🧪 Testes | ${{ needs.test.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔒 Segurança | ${{ needs.security-audit.result }} |" >> $GITHUB_STEP_SUMMARY
