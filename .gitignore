@@ -1,0 +1,33 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+count.txt
+.env
+.env.local
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+todos.json
+
+# Database
+drizzle/
+*.db
+*.db-journal
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS
+Thumbs.db
