@@ -1,32 +1,22 @@
-# 🚀 MicroSaaS Template# 🚀 MicroSaaS Template# 🚀 MicroSaaS TemplateWelcome to your new TanStack app! 
+# 🚀 MicroSaaS Template
 
-
+[![CI](https://github.com/faelribeiro22/micro-sass-template/actions/workflows/ci.yml/badge.svg)](https://github.com/faelribeiro22/micro-sass-template/actions/workflows/ci.yml)
+[![Dependencies](https://github.com/faelribeiro22/micro-sass-template/actions/workflows/update-dependencies.yml/badge.svg)](https://github.com/faelribeiro22/micro-sass-template/actions/workflows/update-dependencies.yml)
 
 Template completo e moderno para desenvolvimento rápido de aplicações SaaS usando **TanStack Start**, com autenticação, banco de dados e componentes UI prontos para uso.
 
-
-
-## ✨ CaracterísticasTemplate completo e moderno para desenvolvimento rápido de aplicações SaaS usando **TanStack Start**, com autenticação, banco de dados e componentes UI prontos para uso.
-
-
+## ✨ Características
 
 - 🔐 **Autenticação Completa** - Sistema de login/registro com [Better Auth](https://www.better-auth.com/)
-
 - 🗄️ **Banco de Dados Type-Safe** - PostgreSQL + [Drizzle ORM](https://orm.drizzle.team/)
-
-- 🐳 **Docker Ready** - PostgreSQL + PgAdmin em Docker Compose## ✨ CaracterísticasTemplate completo e moderno para desenvolvimento rápido de aplicações SaaS usando **TanStack Start**, com autenticação, banco de dados e componentes UI prontos para uso.# Getting Started
-
+- 🐳 **Docker Ready** - PostgreSQL + PgAdmin em Docker Compose
 - ⚡ **TanStack Start** - Framework full-stack com SSR, streaming e roteamento avançado
-
-- 🎨 **Tailwind CSS** - Estilização moderna e responsiva
-
+- 🎨 **Tailwind CSS v4** - Estilização moderna e responsiva
 - 📝 **TypeScript** - Type-safety completo em todo o stack
-
-- 🧩 **Componentes UI** - Componentes reutilizáveis pré-construídos- 🔐 **Autenticação Completa** - Sistema de login/registro com [Better Auth](https://www.better-auth.com/)
-
+- 🧩 **Componentes UI** - Componentes reutilizáveis pré-construídos
 - 🔥 **Hot Module Replacement** - Desenvolvimento ultra-rápido com Vite
-
-- 📱 **Responsivo** - Design mobile-first- 🗄️ **Banco de Dados Type-Safe** - PostgreSQL + [Drizzle ORM](https://orm.drizzle.team/)
+- 📱 **Responsivo** - Design mobile-first
+- 🤖 **CI/CD** - GitHub Actions para testes e atualizações automáticas
 
 
 
