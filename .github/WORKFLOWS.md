@@ -96,6 +96,18 @@ Estas já estão configuradas nos workflows.
 
 **Nenhum secret adicional necessário!** Os workflows usam o `GITHUB_TOKEN` padrão.
 
+### ⚠️ Permissões do GitHub Actions
+
+Se você receber o erro **"GitHub Actions is not permitted to create or approve pull requests"**, siga estes passos:
+
+1. Vá em **Settings** → **Actions** → **General** do repositório
+2. Role até **Workflow permissions**
+3. Selecione **"Read and write permissions"**
+4. ✅ Marque **"Allow GitHub Actions to create and approve pull requests"**
+5. Clique em **Save**
+
+Isso permite que o workflow de atualização de dependências crie PRs automaticamente.
+
 ### Personalização
 
 #### Mudar Horário de Atualização

@@ -79,7 +79,6 @@ jobs:
         if: steps.check-updates.outputs.has_updates == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'chore(deps): atualiza dependências npm'
           title: '🔄 Atualização Automática de Dependências'
           body: |
