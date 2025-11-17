@@ -47,25 +47,30 @@ Este comando:
 ### Antes (não funciona no WSL2):
 ```bash
 npm run db:push        # ❌ Erro de autenticação
+npm run db:studio      # ❌ Erro de autenticação
 npm run docker:reset   # ❌ Erro no db:push
 ```
 
 ### Agora (funciona):
 ```bash
-npm run db:push:docker    # ✅ Executa dentro da rede Docker
+npm run db:push:docker    # ✅ Push schema dentro da rede Docker
+npm run db:studio:docker  # ✅ Drizzle Studio dentro da rede Docker
 npm run docker:reset      # ✅ Atualizado para usar db:push:docker
 ```
 
-## 🛠️ Script Manual
+## 🛠️ Scripts Manuais
 
-Se preferir executar manualmente:
-
+### Push Schema
 ```bash
 ./scripts/db-push.sh
 ```
 
-Ou comando completo:
+### Drizzle Studio
+```bash
+./scripts/db-studio.sh
+```
 
+### Comando completo (db:push)
 ```bash
 docker run --rm \
   --network micro-sass_microsaas-network \
@@ -74,6 +79,18 @@ docker run --rm \
   -e DATABASE_URL="postgresql://microsaas_user:microsaas_password@postgres:5432/microsaas" \
   node:20-alpine \
   sh -c "npm install --silent && npm run db:push"
+```
+
+### Comando completo (db:studio)
+```bash
+docker run --rm -it \
+  --network micro-sass_microsaas-network \
+  -v "$(pwd)":/app \
+  -w /app \
+  -p 4983:4983 \
+  -e DATABASE_URL="postgresql://microsaas_user:microsaas_password@postgres:5432/microsaas" \
+  node:20-alpine \
+  sh -c "npm install --silent && npm run db:studio"
 ```
 
 ## 📝 Alternativas
