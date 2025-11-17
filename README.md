@@ -152,13 +152,13 @@ BETTER_AUTH_URL=http://localhost:3000
 
 
 
-### 5. Sincronize o banco de dadoscp .env.example .env
+### 5. Sincronize o banco de dados
 
-
-
-```bash```## 🚀 ComeçandoThis project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
-
+```bash
 npm run db:push
+```
+
+> ⚠️ **WSL2 + Docker Desktop:** Se você receber erro de autenticação, use `npm run db:push:docker` em vez disso. [Veja mais detalhes](./.github/WSL2_DOCKER_ISSUE.md)
 
 ```
 
