@@ -1184,19 +1184,24 @@ O template funciona em qualquer plataforma que suporte Node.js:        {data.map
 
 ## 🐛 Solução de Problemas
 
-          <li key={person.name}>{person.name}</li>
+### ⚠️ Erro de autenticação PostgreSQL no WSL2 + Docker Desktop
+
+Se você receber erro `autenticação do tipo senha falhou` ao executar `npm run db:push` ou `npm run db:studio`:
+
+```bash
+# Use as versões Docker dos comandos:
+npm run db:push:docker    # ✅ Push schema
+npm run db:studio:docker  # ✅ Drizzle Studio
+```
+
+📚 **Detalhes:** [WSL2_DOCKER_ISSUE.md](./.github/WSL2_DOCKER_ISSUE.md)
 
 ### Erro de conexão com banco de dados
 
-- Railway        ))}
-
 Verifique se:
-
-- PostgreSQL está rodando: `sudo systemctl status postgresql`- Render      </ul>
-
+- PostgreSQL está rodando: `docker ps` ou `sudo systemctl status postgresql`
 - `DATABASE_URL` está correta no `.env`
-
-- Banco de dados existe: `psql -l`- Fly.io    </div>
+- Banco de dados existe: `psql -l`
 
 
 
