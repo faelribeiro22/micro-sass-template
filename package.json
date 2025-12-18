@@ -60,4 +60,8 @@
     "vitest": "^4.0.15",
     "web-vitals": "^5.1.0"
   }
+  ,
+  "overrides": {
+    "drizzle-orm": "^0.45.0"
+  }
 }
