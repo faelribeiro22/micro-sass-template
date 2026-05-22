@@ -31,7 +31,7 @@ jobs:
         id: check-updates
         run: |
           npm install -g npm-check-updates
-          ncu -u --jsonUpgraded > updates.json
+          ncu -u --jsonUpgraded --target minor > updates.json
           
           if [ -s updates.json ] && [ "$(cat updates.json)" != "{}" ]; then
             echo "has_updates=true" >> $GITHUB_OUTPUT
